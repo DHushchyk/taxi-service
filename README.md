@@ -7,14 +7,14 @@ Django project for managing cars and drivers in Taxi Service
 
 ## Check it out!
 
-[Taxi Service project deployed to Heroku]()
+[Taxi Service project deployed to Heroku](https://taxi-service-dh.herokuapp.com/)
 
 ## Installation
 
 Python3 must be already installed
 
 ```shell
-git clone https://github.com/DHushchyk/library.git
+git clone https://github.com/DHushchyk/taxi-service.git
 cd library
 python3 -m venv venv
 source venv/bin/activate
