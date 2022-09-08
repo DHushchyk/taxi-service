@@ -1,3 +1,6 @@
+![logo](static/images/logo.png)
+
+
 # Taxi Service Project
 
 Django project for managing cars and drivers in Taxi Service
