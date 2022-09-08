@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 from django.test import TestCase
 from django.urls import reverse
 
-from taxi.forms import validate_license_number, DriverCreationForm
+from taxi.forms import validate_license_number
 
 
 class PrivateDriverTests(TestCase):
