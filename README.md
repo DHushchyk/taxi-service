@@ -30,8 +30,8 @@ python manage.py runserver
 
 
 ## Test User
-* username: user_test
-* password fgwg6w4f6s464dfg
+* Username: user_test
+* Password: fgwg6w4f6s464dfg
 
 
 ## Demo
