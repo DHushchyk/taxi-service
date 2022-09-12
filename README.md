@@ -1,4 +1,4 @@
-![logo](static/images/logo.png)
+![logo](static/images/logo-taxi.png)
 
 
 # Taxi Service Project
