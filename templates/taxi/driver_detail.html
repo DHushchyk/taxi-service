@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>
+  <h1 >
     Username: {{ driver.username }}
     <a href="{% url 'taxi:driver-delete' pk=driver.id %}" class="btn btn-danger link-to-page">
       Delete
@@ -17,7 +17,7 @@
   <p><strong>License number:</strong> {{ driver.license_number }}</p>
   <p><strong>Is staff:</strong> {{ driver.is_staff }}</p>
 
-  <div class="ml-3">
+  <div>
     <h4>Cars:</h4>
 
     {% for car in driver.cars.all %}
