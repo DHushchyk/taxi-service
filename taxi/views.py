@@ -123,7 +123,7 @@ class CarCreateView(LoginRequiredMixin, generic.CreateView):
 class CarUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Car
     form_class = CarForm
-    success_url = reverse_lazy("taxi:car-list")
+    success_url = reverse_lazy("taxi:car-detail")
 
 
 class CarDeleteView(LoginRequiredMixin, generic.DeleteView):
@@ -171,7 +171,7 @@ class DriverCreateView(LoginRequiredMixin, generic.CreateView):
 class DriverLicenseUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Driver
     form_class = DriverLicenseUpdateForm
-    success_url = reverse_lazy("taxi:driver-list")
+    success_url = reverse_lazy("taxi:driver-detail")
 
 
 class DriverDeleteView(LoginRequiredMixin, generic.DeleteView):
