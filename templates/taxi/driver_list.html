@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {%  load crispy_forms_filters %}
+{% load static %}
 
 {% block content %}
     <h1>
-      Driver List
-      <a href="{% url 'taxi:driver-create' %}" class="btn btn-primary link-to-page">
+      Our Drivers
+      <img src="{% static 'images/driver.png' %}" class="list-head-img" alt="">
+      <a href="{% url 'taxi:driver-create' %}" class="btn btn-secondary link-to-page">
         Create
       </a>
     </h1>

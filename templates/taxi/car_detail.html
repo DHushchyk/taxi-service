@@ -13,23 +13,23 @@
   </h1>
   <p>Manufacturer: ({{ car.manufacturer.name }}, {{ car.manufacturer.country }})</p>
   <h1>
-    Drivers
-
+    Drivers:
     {% if car in user.cars.all %}
-      <a href="{% url 'taxi:toggle-car-assign' pk=car.id %}" class="btn btn-danger link-to-page">
+      <a href="{% url 'taxi:toggle-car-assign' pk=car.id %}" class="btn btn-secondary link-to-page">
         Delete me from this car
       </a>
     {% else %}
-      <a href="{% url 'taxi:toggle-car-assign' pk=car.id %}" class="btn btn-success link-to-page">
-        Assign me from this car
+      <a href="{% url 'taxi:toggle-car-assign' pk=car.id %}" class="btn btn-secondary link-to-page">
+        Assign me to this car
       </a>
     {% endif %}
 
   </h1>
-  <hr>
-  <ul>
+  <ul class="list-group list-group-flush">
     {% for driver in car.drivers.all %}
-      <li>{{ driver.username }} ({{ driver.first_name }} {{ driver.last_name }})</li>
+      <a href="{% url 'taxi:driver-detail' pk=driver.id %}" class="list-group-item">
+        {{ driver.username }} ({{ driver.first_name }} {{ driver.last_name }})
+      </a>
     {% endfor %}
   </ul>
 {% endblock %}

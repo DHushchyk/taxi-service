@@ -1,25 +1,42 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-    <h1>Taxi Service Home</h1>
-    <p>Welcome to Best Taxi Ever!</p>
-    <h2>Dynamic content</h2>
-    <p>The Taxi service has the following record counts:</p>
-    <ul style="list-style: none">
-        <li>
-          <strong><a href="{% url 'taxi:car-list' %}">Cars: {{ num_cars }}</a></strong>
-        </li>
-        <li>
-          <strong><a href="{% url 'taxi:driver-list' %}">Drivers: {{ num_drivers}}</a></strong>
-        </li>
-        <li>
-          <strong>
-            <a href="{% url 'taxi:driver-list' %}">Manufacturers: {{ num_manufacturers }}</a>
-          </strong>
-        </li>
-    </ul>
+  <h1 >Taxi Service Home
+    <img src="{% static 'images/logo-taxi.png' %}" alt="" class="list-head-img">
+  </h1>
+  <br>
+  <h2>The Taxi service has the following record counts:</h2>
+  <br>
+  <ul style="list-style: none">
+    <li>
+      <h3>
+        <img src="{% static 'images/car.png' %}" alt="" class="list-head-img">
+        Cars: {{ num_cars }}
+        <a href="{% url 'taxi:car-list' %}" style="color: black">
+          <img src="{% static 'images/details.png' %}" alt="" class="list-head-img">
+        </a>
+      </h3>
+    </li>
+    <li>
+      <h3>
+        <img src="{% static 'images/driver.png' %}" alt="" class="list-head-img">
+        Drivers: {{ num_drivers }}
+        <a href="{% url 'taxi:driver-list' %}" style="color: black">
+          <img src="{% static 'images/details.png' %}" alt="" class="list-head-img">
+        </a>
+      </h3>
+    </li>
+    <h3>
+      <img src="{% static 'images/manufacturer.png' %}" alt="" class="list-head-img">
+      Manufacturers: {{ num_manufacturers }}
+      <a href="{% url 'taxi:manufacturer-list' %}" style="color: black">
+        <img src="{% static 'images/details.png' %}" alt="" class="list-head-img">
+      </a>
+    </h3>
+  </ul>
 
-    <p>You have visited this page
+    <p style="font-style: italic">You have visited this page
         {{ num_visits }} time{{ num_visits|pluralize }}.
     </p>
 

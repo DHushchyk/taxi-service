@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% load crispy_forms_filters %}
+{% load static %}
 
 {% block content %}
   <h1>
-    Car list
-    <a href="{% url 'taxi:car-create' %}" class="btn btn-primary link-to-page">
-      Create
+    Our Cars
+    <img src="{% static 'images/car.png' %}" class="list-head-img" alt="">
+    <a href="{% url 'taxi:car-create' %}" class="btn btn-secondary link-to-page">
+      Add new car
     </a>
   </h1>
 
@@ -15,11 +17,13 @@
   </form>
 
   {% if car_list %}
-    <ul>
+    <ul class="list-group list-group-flush">
       {% for car in car_list %}
-        <li>
-          <a href="{% url "taxi:car-detail" pk=car.id %} ">{{ car.id }}</a>
+        <li class="list-group-item">
           {{ car.model }} ({{ car.manufacturer.name }})
+          <a href="{% url "taxi:car-detail" pk=car.id %}">
+            <img src="{% static 'images/details.png' %}" alt="" class="nav-img">
+          </a>
         </li>
       {% endfor %}
     </ul>
